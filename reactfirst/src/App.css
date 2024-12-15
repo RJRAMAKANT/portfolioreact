@@ -1,0 +1,345 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Start Animations*/
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+@-webkit-keyframes zoomIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.3, 0.3, 0.3);
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.3, 0.3, 0.3);
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+/*End Animations*/
+/*
+-- Start BackGround Animation 
+*/
+.area {
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+}
+
+.circles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 96%;
+	overflow: hidden;
+}
+
+.circles li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.308);
+	animation: animate 25s linear infinite;
+	bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+	left: 25%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+	left: 10%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 2s;
+	animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+	left: 70%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+	left: 40%;
+	width: 60px;
+	height: 60px;
+	animation-delay: 0s;
+	animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+	left: 65%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+	left: 75%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+	left: 35%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	animation-delay: 15s;
+	animation-duration: 30s;
+}
+
+.circles li:nth-child(9) {
+	left: 20%;
+	width: 15px;
+	height: 15px;
+	animation-delay: 2s;
+	animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+	left: 85%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 8s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+		border-radius: 0;
+	}
+
+	100% {
+		transform: translateY(-2500px) rotate(720deg);
+		opacity: 0;
+		border-radius: 50%;
+	}
+}
+/*
+-- End BackGround Animation 
+*/
+
+
+
+
+.card7 {
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 32px;
+  padding: 3px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+ 
+}
+
+.card7 .mail {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  background: transparent;
+  border: none;
+}
+
+.card7 .mail svg {
+  stroke: #f74c11;
+  stroke-width: 3px;
+}
+
+.card7 .mail svg:hover {
+  stroke: #f74c11;
+}
+
+.card7 .profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.card7 .profile-pic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.card7 .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #f74c11;
+  top: 80%;
+  border-radius: 29px;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.card7 .bottom .content {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 170px;
+}
+
+.card7 .bottom .content .name {
+  display: block;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 900;
+}
+
+.card7 .bottom .content .about-me {
+  display: block;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.card7 .bottom .bottom-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card7 .bottom .bottom-bottom .social-links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card7 .bottom .bottom-bottom .social-links-container svg {
+  height: 20px;
+  fill: white;
+  filter: drop-shadow(0 5px 5px #a5848222);
+}
+
+.card7 .bottom .bottom-bottom .social-links-container svg:hover {
+  fill: #d68b90;
+  transform: scale(1.2);
+}
+
+.card7 .bottom .bottom-bottom .button {
+  background: white;
+  color: #f9b0b5;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.6rem;
+ 
+}
+
+.card7 .bottom .bottom-bottom .button:hover {
+  background: #d68b90;
+  color: white;
+}
+
+.card7:hover {
+  border-top-left-radius: 55px;
+}
+
+.card7:hover .bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.card7:hover .profile-pic {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 7px solid #f9b0b5;
+
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.card7:hover .profile-pic:hover {
+  transform: scale(1.3);
+  border-radius: 0px;
+}
+
+.card7:hover .profile-pic img {
+  transform: scale(2.5);
+  object-position: 0px 25px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+@keyframes opacity {
+  0% {
+    border-right: 1px solid transparent;
+  }
+  10% {
+    border-right: 1px solid #f74c11;
+  }
+  80% {
+    border-right: 1px solid #f74c11;
+  }
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+
+
